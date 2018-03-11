@@ -5,7 +5,7 @@
       :key="post.id"
       :id="post.id"
       :is-admin="isAdmin"
-      :thumbnail-link="post.thumbnailLink"
+      :thumbnail="post.thumbnail"
       :title="post.title"
       :preview-text="post.previewText"/>
   </section>
@@ -24,7 +24,8 @@ export default {
     },
     posts: {
       type: Array,
-      required: true
+      required: true,
+      default: () => []
     }
   }
 };

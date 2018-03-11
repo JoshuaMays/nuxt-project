@@ -4,7 +4,7 @@
     class="post-preview">
     <article>
       <div
-        :style="{backgroundImage: `url('${thumbnailLink}')`}"
+        :style="{backgroundImage: `url('${thumbnail}')`}"
         class="post-thumbnail" />
       <div class="post-content">
         <h1>{{ title }}</h1>
@@ -34,7 +34,7 @@ export default {
       type: String,
       required: true
     },
-    thumbnailLink: {
+    thumbnail: {
       type: String,
       required: true
     }
