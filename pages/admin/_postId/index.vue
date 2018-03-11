@@ -7,23 +7,23 @@
 </template>
 
 <script>
-import AdminPostForm from '@/components/Admin/AdminPostForm';
+import AdminPostForm from "@/components/Admin/AdminPostForm"
 export default {
-  layout: 'admin',
+  layout: "admin",
   components: {
     AdminPostForm
   },
   data() {
     return {
       loadedPost: {
-        author: 'Joshua',
-        title: 'First Post!',
-        content: 'omg omg omg',
-        thumbnailLink: 'http://www.placecage.com/gif/200/300'
+        author: "Joshua",
+        title: "First Post!",
+        content: "omg omg omg",
+        thumbnailLink: "http://www.placecage.com/gif/200/300"
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>
@@ -38,4 +38,3 @@ export default {
   }
 }
 </style>
-

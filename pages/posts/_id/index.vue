@@ -1,18 +1,38 @@
 <template>
   <div class="single-post-page">
     <section class="post">
-      <h1 class="post-title">Title</h1>
+      <h1 class="post-title">{{ loadedPost.title }}</h1>
       <div class="post-details">
-        <div class="post-detail">Last Updated On:</div>
-        <div class="post-detail">Written By:</div>
+        <div class="post-detail">Last Updated On: {{ loadedPost.updatedDate }}</div>
+        <div class="post-detail">Written By: {{ loadedPost.author }}</div>
       </div>
-      <p class="post-content">Content</p>
+      <p class="post-content">{{ loadedPost.content }}</p>
     </section>
     <section class="post-feedback">
       <p>Let me know what you think about this post. Send a mail to: <a href="mailto:example@example.com">My Email </a></p>
     </section>
   </div>
 </template>
+
+<script>
+export default {
+  asyncData(context, cb) {
+    setTimeout(() => {
+      cb(null, {
+        loadedPost: {
+          id: "1",
+          title: "First Post (ID: " + context.params.id + ")",
+          previewText: "This is our first post!",
+          author: "Joshua",
+          updatedDate: new Date(),
+          content: "Dummy test wawawawawa",
+          thumbnailLink: "http://www.placecage.com/gif/200/300"
+        }
+      });
+    }, 1000);
+  }
+};
+</script>
 
 <style scoped>
 .single-post-page {

@@ -1,29 +1,18 @@
 <template>
   <section class="post-list">
-    <PostPreview 
-      id="1"
+    <PostPreview
+      v-for="post in posts"
+      :key="post.id"
+      :id="post.id"
       :is-admin="isAdmin"
-      thumbnailLink="http://www.placecage.com/gif/200/300"
-      title="Hello There"
-      previewText="This is my first post"/>
-    <PostPreview 
-      id="2"
-      :is-admin="isAdmin"
-      thumbnailLink="http://www.placecage.com/g/200/300"
-      title="Hello There Again"
-      previewText="This is my second post"/>
-    <PostPreview 
-      id="3"
-      :is-admin="isAdmin"
-      thumbnailLink="http://www.placecage.com/c/200/300"
-      title="Getting a hang of this"
-      previewText="This is my third post"/>
+      :thumbnail-link="post.thumbnailLink"
+      :title="post.title"
+      :preview-text="post.previewText"/>
   </section>
 </template>
 
-
 <script>
-import PostPreview from '@/components/Posts/PostPreview';
+import PostPreview from "@/components/Posts/PostPreview"
 export default {
   components: {
     PostPreview
@@ -32,9 +21,13 @@ export default {
     isAdmin: {
       type: Boolean,
       default: false
+    },
+    posts: {
+      type: Array,
+      required: true
     }
   }
-}
+};
 </script>
 
 <style scoped>
