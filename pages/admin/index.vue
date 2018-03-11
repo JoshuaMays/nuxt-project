@@ -5,21 +5,21 @@
     </section>
     <section class="existing-posts">
       <h1>Existing Posts</h1>
-      <PostList isAdmin />
+      <PostList is-admin />
     </section>
   </div>
 </template>
 
 <script>
-import PostList from '@/components/Posts/PostList';
-import AppButton from '@/components/UI/AppButton';
+import PostList from "@/components/Posts/PostList"
+import AppButton from "@/components/UI/AppButton"
 export default {
-  layout: 'admin',
+  layout: "admin",
   components: {
     PostList,
     AppButton
   }
-}
+};
 </script>
 
 <style scoped>

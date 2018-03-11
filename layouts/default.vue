@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheHeader @sidenavToggle="displaySideNav = !displaySideNav" />
-    <TheSideNav 
+    <TheSideNav
       :show="displaySideNav"
       @close="displaySideNav = false "/>
     <nuxt/>
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import TheHeader from '@/components/Navigation/TheHeader';
-import TheSideNav from '@/components/Navigation/TheSideNav'
+import TheHeader from "@/components/Navigation/TheHeader"
+import TheSideNav from "@/components/Navigation/TheSideNav"
 export default {
   components: {
     TheHeader,
@@ -19,15 +19,14 @@ export default {
   data() {
     return {
       displaySideNav: false
-    }
+    };
   }
-}
+};
 </script>
-
 
 <style>
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
